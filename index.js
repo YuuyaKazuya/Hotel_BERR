@@ -226,7 +226,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 
 // Other imports...
 
-const uri = "mongodb+srv://aidazainuddin4499:TEST123@cluster0.npqrvz0.mongodb.net/";
+const uri = "mongodb+srv://Sufi21:Sufi2024@cluster0.hk1ehq1.mongodb.net/";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Swagger setup and other code...
@@ -236,7 +236,7 @@ async function run() {
     // Connect the client to the server (optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
-    await client.db("Hostel_Visitor_Management").command({ ping: 1 });
+    await client.db("hotelBERR").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
@@ -267,7 +267,7 @@ let securityCollection;
 client.connect()
   .then(() => {
     console.log('Connected to MongoDB');
-    db = client.db('Hostel_Visitor_Management');
+    db = client.db('hotelBERR');
     
 
   // Initialize collections after establishing the connection
@@ -280,7 +280,7 @@ client.connect()
 
   // Now you can safely start your server here, after the DB connection is established
   app.listen(port, () => {
-    console.log(`Server is running on https://hotel16.azurewebsites.net/`);
+    console.log(`Server is running on https://assignmentis-hotelberr.azurewebsites.net/`);
   });
 });
 
